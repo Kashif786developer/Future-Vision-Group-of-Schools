@@ -1,0 +1,98 @@
+
+:root {
+  --primary: #0b3c5d;
+  --secondary: #f4d35e;
+}
+* { box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+  background-color: #949293; 
+  color: #f7f2f2;
+}
+
+.header { background: var(--primary); color: #afdde0; padding: 15px; }
+.logo-area { display: flex; align-items: center; gap: 10px; justify-content: center; }
+.logo { width: 50px; }
+nav { text-align: center; margin-top: 10px; }
+nav a { color: #fff; margin: 0 10px; text-decoration: none; font-weight: bold; }
+.hero { background: linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)), url('https://images.unsplash.com/photo-1524995997946-a1c2e315a42f'); color: #fff; padding: 100px 20px; text-align: center; }
+section {
+  background-color: #555e70;
+  padding: 60px 30px;
+  max-width: 1100px;
+  margin: 40px auto;
+  border-radius: 10px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
+}
+
+
+.gallery { display: grid; grid-template-columns: repeat(auto-fit,minmax(250px,1fr)); gap: 15px; }
+.gallery img { width: 100%; border-radius: 8px; }
+.achievements li { margin: 10px 0; font-size: 1.1rem; }
+form { max-width: 400px; margin: auto; display: flex; flex-direction: column; gap: 10px; }
+input, select, button { padding: 10px; }
+button { background: var(--secondary); border: none; cursor: pointer; }
+footer { background: #222; color: #ccc; text-align: center; padding: 20px; }
+.fade-in { opacity: 0; transform: translateY(20px); transition: .8s; }
+.fade-in.show { opacity: 1; transform: translateY(0); }
+/* Tables Styling */
+.classes-table,
+.fees-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.classes-table th,
+.classes-table td,
+.fees-table th,
+.fees-table td {
+  border: 1px solid #ddd;
+  padding: 12px;
+  text-align: center;
+}
+
+.classes-table th,
+.fees-table th {
+  background-color: var(--primary);
+  color: #fff;
+}
+
+.classes-table tr:nth-child(even),
+.fees-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.fee-note {
+  margin-top: 15px;
+  font-size: 0.95rem;
+  text-align: center;
+  color: #fdfbfb;
+}
+.contact-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+
+.contact-info p {
+  margin-bottom: 10px;
+  font-size: 1rem;
+}
+
+#contactForm {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+#contactForm textarea {
+  resize: none;
+}
+
+@media (max-width: 768px) {
+  .contact-container {
+    grid-template-columns: 1fr;
+  }
+}
